@@ -23,6 +23,7 @@
     margin: 10px;
     display:flex;
     justify-content: space-between;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
 }
 
 /* SIDEBAR SEARCH AREA */
@@ -34,6 +35,7 @@
     margin: 10px;
     display: flex;
     align-items: center;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
 }
 
 .search-box{
@@ -51,6 +53,7 @@
     padding: 5px 5px;
     margin: 10px;
     flex: 1;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
 }
 
 /* ConversationItems component */
@@ -77,8 +80,8 @@
     color:white;
     font-weight: bolder;
     font-size: 2rem;
-    height: 32px;
-    width: 32px;
+    height: 42px;
+    width: 42px;
     padding: 2px;
 
     border-radius: 50%;
@@ -90,7 +93,7 @@
     grid-area: 1/2/2/4;
     font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
     font-weight: bold;
-    color: rgba(0, 0, 0, 0.50);
+    color: rgba(0, 0, 0, 0.40);
 }
 
 .con-timeStamp{
@@ -124,6 +127,7 @@
     padding: 10px;
     margin: 10px;
     border-radius: 20px;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
 }
 
 .header-text{
@@ -136,9 +140,66 @@
 /* MAIN MESSAGES SHOWCASE AREA */
 
 .messages-container{
-    background-color: aquamarine;
+    background-color: white;
+    border-radius: 20px;
+    margin: 10px;
+    padding: 10px;
     flex: 1;
+    overflow: scroll;
+    scrollbar-width: 0;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
 }
+
+.messages-container::-webkit-scrollbar{
+    display: none;
+}
+
+/* MessageOthers */
+.other-message-container{
+    display: flex;
+}
+
+.other-text-content{
+    background-color: #d9d9d9;
+    padding: 10px;
+    margin: 5px;
+    border-radius: 20px;
+    width: max-content;
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column
+}
+
+/* MessageSelf */
+
+.self-message-container{
+    display: flex;
+    justify-content: flex-end;
+}
+
+.self-message-box{
+    display: flex;
+    flex-direction: column;
+    background-color: #63d7b0;
+    width: max-content;
+    padding: 13px 10px;
+    margin: 5px;
+    border-radius: 20px;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.self-timeStamp{
+    font-size: 0.75rem;
+    align-self: flex-end;
+    font-weight: lighter;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    color: rgba(0, 0, 0, 0.44);
+}
+
+.self-message-text{
+    color: rgba(0, 0, 0, 0.64);
+}
+
 
 /* TEXT SEND AREA */
 
@@ -149,4 +210,127 @@
     border-radius: 20px;
     display: flex;
     justify-content: space-between;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+
+    /* WELCOME PAGE */
+
+.welcome-container{
+    flex: 0.7;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    color: rgba(0, 0, 0, 0.54);
+    border-bottom: 5px solid #63d7b0;
+    border-radius: 20px;
+}
+
+.welcome-logo{
+    height: 20vw;
+}
+
+    /* CREATE GROUPS */
+
+.createGroups-container{
+    flex: 0.7;
+    align-self: center;
+    padding: 20px 0;
+    margin: 5px 10px 5px 0;
+    border-radius: 20px;
+    display: flex;
+    justify-content: space-between;
+    background-color: white;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+
+    /* LOGIN PAGE */
+
+.login-container{
+    background-color: #F4F5F8;
+    height: 90vh;
+    width: 90vw;
+    display: flex;
+    border-radius: 20px;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+
+.image-container{
+    flex: 0.3;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.login-box{
+    flex: 0.7;
+    background-color: white;
+    border-radius: 20px;
+    margin: 10px;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    color: #63d7b0;
+    font-weight: bolder;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.login-text{
+    font-size: 1.7rem;
+}
+
+    /* USERS_GROUPS */
+
+.list-container{
+    flex: 0.7;
+    display: flex;
+    flex-direction: column;
+}
+
+.ug-header{
+    background-color: white;
+    border-radius: 20px;
+    padding: 12px 5px;
+    margin: 10px;
+    display:flex;
+    align-items: center;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+
+.ug-title{
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    color: rgba(0, 0, 0, 0.64);
+    margin-left: 10px;
+}
+
+.ug-list{
+    flex: 1;
+    overflow: scroll;
+    scrollbar-width: none;
+    padding: 10px;
+}
+.ug-list::-webkit-scrollbar{
+    display: none;
+}
+
+.list-tem{
+    display: flex;
+    align-items: center;
+    background-color: white;
+    border-radius: 20px;
+    padding: 10px 5px;
+    margin: 10px;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    transition-duration: 0.3s;
+    cursor: pointer;
+}
+.list-tem:hover{
+    background-color: rgb(226, 226, 226);
+}
+.list-tem:active{
+    background-color: white;
 }

@@ -1,16 +1,18 @@
 import DeleteIcon from '@mui/icons-material/Delete';
 import SendIcon from '@mui/icons-material/Send';
 import { IconButton } from '@mui/material';
+import MessageOthers from './MessageOthers';
+import MessageSelf from './MessageSelf';
 
 const ChatArea = ({ props }) => {
   return (
     <div className="chatArea-container">
 
         <div className="chatArea-header">
-            <p className="con-icon">T</p>
+            <p className="con-icon">{props.name[0]}</p>
             <div className="header-text">
-                <p className="con-title">Test#1</p>
-                <p className="con-timeStamp">today</p>
+                <p className="con-title">{props.name}</p>
+                <p className="con-timeStamp">{props.timeStamp}</p>
             </div>
             <IconButton>
                 <DeleteIcon />
@@ -18,9 +20,16 @@ const ChatArea = ({ props }) => {
         </div>
 
         <div className="messages-container">
-            
+            <MessageOthers />
+            <MessageSelf />
+            <MessageOthers />
+            <MessageSelf />
+            <MessageOthers />
+            <MessageSelf />
+            <MessageOthers />
+            <MessageSelf />
         </div>
-        
+
         <div className="text-input-area">
             <input placeholder="type a message..." className="search-box"/>
             <IconButton>
