@@ -62,9 +62,18 @@
     grid-template-columns: 32px auto auto;
     grid-template-rows: auto auto;
     column-gap: 10px;
-    padding: 5px;
+    padding: 5px 5px 5px 10px;
     margin: 5px;
     border-radius: 20px;
+    transition-duration: 0.3s;
+}
+
+.conversation-container:hover{
+    background-color: #d9d9d9;
+}
+
+.conversation-container:active{
+    background-color: white;
 }
 
 .con-icon{
@@ -234,11 +243,27 @@
 
     /* CREATE GROUPS */
 
-.createGroups-container{
+.createGroups-main-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     flex: 0.7;
+}
+
+.createGroups-text{
+    display: flex;
+    gap: 10px;
+}
+
+.createGroups-main-container h1{
+    color: #2ebe8e;
+}
+
+.createGroups-container{
     align-self: center;
-    padding: 20px 0;
-    margin: 5px 10px 5px 0;
+    padding: 20px 5px;
+    margin-top: 20px;
     border-radius: 20px;
     display: flex;
     justify-content: space-between;

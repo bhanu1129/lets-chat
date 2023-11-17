@@ -3,8 +3,29 @@ import SendIcon from '@mui/icons-material/Send';
 import { IconButton } from '@mui/material';
 import MessageOthers from './MessageOthers';
 import MessageSelf from './MessageSelf';
+import { useState } from 'react';
 
-const ChatArea = ({ props }) => {
+const ChatArea = () => {
+    const [conversations, setConversations] = useState([
+      {
+        name: "Test#1",
+        lastMessage: "Last message 1",
+        timeStamp: "today",
+      },
+      {
+        name: "Test#2",
+        lastMessage: "Last message 2",
+        timeStamp: "today",
+      },
+      {
+        name: "Test#3",
+        lastMessage: "Last message 3",
+        timeStamp: "today",
+      },
+    ]);
+
+  var props = conversations[0];
+
   return (
     <div className="chatArea-container">
 
